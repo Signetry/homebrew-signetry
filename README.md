@@ -30,25 +30,24 @@ umbra guard --help    # deterministic pre-action check
 
 ## What it installs
 
-The `umbra` CLI from the `umbra-core` PyPI package, into an isolated Python
-virtualenv (Homebrew's `python@3.12`), symlinked onto your `PATH`. No system
-Python packages are touched.
+The `umbra` CLI, built from the **source-available** `umbra-core` repo (All Rights
+Reserved; not on PyPI) into an isolated Python virtualenv (Homebrew's
+`python@3.12`), symlinked onto your `PATH`. No system Python packages are touched.
 
 ## Other install paths
 
-- **pip / uv / pipx:** `pip install umbra-core` (or `uv tool install umbra-core`)
+- **pip / uv / pipx:** `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"`
 - **one-liner:** `curl -fsSL https://raw.githubusercontent.com/bkd-dotcom/umbra-core/main/install.sh | sh`
 
 Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
 
 ## Updating the formula (maintainers)
 
-On each `umbra-core` release, bump `url` + `sha256` in `Formula/umbra.rb` to the
-new PyPI sdist. Get them with:
+On each `umbra-core` release, bump the `tag` + `revision` in `Formula/umbra.rb` to
+the new git tag. Get the commit SHA for a tag with:
 
 ```sh
-curl -s https://pypi.org/pypi/umbra-core/<version>/json \
-  | python3 -c 'import sys,json;[print(f["url"],f["digests"]["sha256"]) for f in json.load(sys.stdin)["urls"] if f["packagetype"]=="sdist"]'
+gh api repos/bkd-dotcom/umbra-core/git/refs/tags/<vX.Y.Z> --jq .object.sha
 ```
 
 ## License
