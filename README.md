@@ -36,7 +36,7 @@ Reserved; not on PyPI) into an isolated Python virtualenv (Homebrew's
 
 ## Other install paths
 
-- **pip / uv / pipx:** `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"`
+- **pip / uv / pipx:** `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"`
 - **one-liner:** `curl -fsSL https://raw.githubusercontent.com/bkd-dotcom/umbra-core/main/install.sh | sh`
 
 Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).

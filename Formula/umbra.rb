@@ -6,8 +6,8 @@ class Umbra < Formula
   # umbra-core is SOURCE-AVAILABLE (All Rights Reserved) and is NOT published to
   # PyPI (all PyPI releases were yanked). Install from the source repo by tag.
   url "https://github.com/bkd-dotcom/umbra-core.git",
-      tag:      "v0.5.3",
-      revision: "25eebaedb43a45d6e71288c0deda10d3a698b2b0"
+      tag:      "v0.5.4",
+      revision: "f6a00085f0a419cb9e577d50bc59df7e5255dc80"
   license :cannot_represent # All Rights Reserved — not open source
 
   depends_on "python@3.12"
