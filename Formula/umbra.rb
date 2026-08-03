@@ -3,19 +3,21 @@ class Umbra < Formula
 
   desc "Agent-agnostic change-control plane for coding agents (the umbra CLI)"
   homepage "https://github.com/bkd-dotcom/umbra-umbrella"
-  url "https://files.pythonhosted.org/packages/f3/60/3e4ca71fa8a21e9fa6a9061061dcdbfd72a840d156105baa6e735ef5dfea/umbra_core-0.3.0.tar.gz"
-  sha256 "8f7843d8840871739158eb3bc9277142460ac8a46ff7a8943bf1655354a23be2"
-  license "MIT"
+  # umbra-core is SOURCE-AVAILABLE (All Rights Reserved) and is NOT published to
+  # PyPI (all PyPI releases were yanked). Install from the source repo by tag.
+  url "https://github.com/bkd-dotcom/umbra-core.git",
+      tag:      "v0.5.3",
+      revision: "25eebaedb43a45d6e71288c0deda10d3a698b2b0"
+  license :cannot_represent # All Rights Reserved — not open source
 
   depends_on "python@3.12"
 
   # umbra-core's runtime deps (cryptography, PyYAML) and their transitive deps are
-  # resolved from PyPI at install time into an isolated virtualenv. We install the
-  # published wheel + deps rather than pinning every resource by hand, so the
-  # formula stays correct across dependency patch releases.
+  # resolved from PyPI at install time into an isolated virtualenv. umbra-core
+  # itself is built from this checkout (source-available; not on PyPI).
   def install
     venv = virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "umbra-core==#{version}"
+    system libexec/"bin/pip", "install", buildpath
     bin.install_symlink Dir["#{libexec}/bin/umbra"]
   end
 
