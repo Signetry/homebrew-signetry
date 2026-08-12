@@ -4,7 +4,7 @@
 > This repository is strictly for viewing and contributing to the original project. You may not use, copy, modify, distribute, or commercialize this code for your own personal or commercial projects without explicit written permission. Only the original author retains the right to use and monetize this project.
 
 
-Homebrew tap for the **Umbra CLI** — the [umbra-core](https://github.com/bkd-dotcom/umbra-core)
+Homebrew tap for the **Umbra CLI** — the [umbra-core](https://github.com/Signetry/core)
 change-control plane for coding agents.
 
 ## Install
@@ -36,10 +36,10 @@ Reserved; not on PyPI) into an isolated Python virtualenv (Homebrew's
 
 ## Other install paths
 
-- **pip / uv / pipx:** `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"`
-- **one-liner:** `curl -fsSL https://raw.githubusercontent.com/bkd-dotcom/umbra-core/main/install.sh | sh`
+- **pip / uv / pipx:** `pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"`
+- **one-liner:** `curl -fsSL https://raw.githubusercontent.com/Signetry/core/main/install.sh | sh`
 
-Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
+Part of the [Umbra platform](https://github.com/Signetry/signetry).
 
 ## Updating the formula (maintainers)
 
@@ -47,7 +47,7 @@ On each `umbra-core` release, bump the `tag` + `revision` in `Formula/umbra.rb` 
 the new git tag. Get the commit SHA for a tag with:
 
 ```sh
-gh api repos/bkd-dotcom/umbra-core/git/refs/tags/<vX.Y.Z> --jq .object.sha
+gh api repos/Signetry/core/git/refs/tags/<vX.Y.Z> --jq .object.sha
 ```
 
 ## License
