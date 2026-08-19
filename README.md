@@ -36,7 +36,7 @@ Reserved; not on PyPI) into an isolated Python virtualenv (Homebrew's
 
 ## Other install paths
 
-- **pip / uv / pipx:** `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"`
+- **pip / uv / pipx:** `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"`
 - **one-liner:** `curl -fsSL https://raw.githubusercontent.com/Signetry/core/main/install.sh | sh`
 
 Part of the [Signetry platform](https://github.com/Signetry/signetry).

@@ -6,8 +6,8 @@ class Signetry < Formula
   # signetry-core is SOURCE-AVAILABLE (All Rights Reserved) and is NOT published to
   # PyPI (all PyPI releases were yanked). Install from the source repo by tag.
   url "https://github.com/Signetry/core.git",
-      tag:      "v0.6.0",
-      revision: "b1f437ec33ca3e57586abc56accda7de529ec519"
+      tag:      "v0.7.0",
+      revision: "0d39eb34f32152f5a3015ce9282245e38c25d9fc"
   license :cannot_represent # All Rights Reserved — not open source
 
   depends_on "python@3.12"
