@@ -3,18 +3,22 @@ class Signetry < Formula
 
   desc "Agent-agnostic change-control plane for coding agents (the signetry CLI)"
   homepage "https://github.com/Signetry/signetry"
-  # signetry-core is SOURCE-AVAILABLE (All Rights Reserved) and is NOT published to
-  # PyPI (all PyPI releases were yanked). Install from the source repo by tag.
+  # signetry-core is SOURCE-AVAILABLE under BUSL-1.1 (converts to Apache-2.0 on
+  # 2030-08-31) and is NOT published to PyPI (all PyPI releases were yanked).
+  # Install from the source repo by tag.
   url "https://github.com/Signetry/core.git",
       tag:      "v0.7.0",
       revision: "0d39eb34f32152f5a3015ce9282245e38c25d9fc"
-  license :cannot_represent # All Rights Reserved — not open source
+  # BUSL-1.1 is a valid SPDX identifier, so the real licence can be named here
+  # rather than hidden behind :cannot_represent — `brew info signetry` now shows
+  # it. This tap itself is Apache-2.0; this field describes what gets installed.
+  license "BUSL-1.1"
 
   depends_on "python@3.12"
 
   # signetry-core's runtime deps (cryptography, PyYAML) and their transitive deps are
   # resolved from PyPI at install time into an isolated virtualenv. signetry-core
-  # itself is built from this checkout (source-available; not on PyPI).
+  # itself is built from this checkout (source-available under BUSL-1.1; not on PyPI).
   def install
     venv = virtualenv_create(libexec, "python3.12")
     system libexec/"bin/pip", "install", buildpath
