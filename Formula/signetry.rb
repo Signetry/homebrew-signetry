@@ -7,8 +7,8 @@ class Signetry < Formula
   # 2030-08-31) and is NOT published to PyPI (all PyPI releases were yanked).
   # Install from the source repo by tag.
   url "https://github.com/Signetry/core.git",
-      tag:      "v0.7.0",
-      revision: "0d39eb34f32152f5a3015ce9282245e38c25d9fc"
+      tag:      "v0.8.0",
+      revision: "ee974f324aca0fd35726569d4a1c4f55a5a75a2e"
   # BUSL-1.1 is a valid SPDX identifier, so the real licence can be named here
   # rather than hidden behind :cannot_represent — `brew info signetry` now shows
   # it. This tap itself is Apache-2.0; this field describes what gets installed.

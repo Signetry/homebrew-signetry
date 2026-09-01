@@ -46,7 +46,7 @@ four-year clock. See
 
 ## Other install paths
 
-- **pip / uv / pipx:** `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"`
+- **pip / uv / pipx:** `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.8.0"`
 - **one-liner:** `curl -fsSL https://raw.githubusercontent.com/Signetry/core/main/install.sh | sh`
 
 Part of the [Signetry platform](https://github.com/Signetry/signetry).
